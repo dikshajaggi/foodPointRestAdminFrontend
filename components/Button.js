@@ -1,11 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const CustomButton = ({text, isLoading}) => {
+const CustomButton = ({text, isLoading, otherStyles}) => {
   return (
     <TouchableOpacity  
         activeOpacity={0.7}
-        className={`bg-orange-500 rounded-xl min-h-[62px] flex flex-row justify-center items-center ${
+        className={`capitalize bg-orange-500 rounded-xl min-h-[62px] flex flex-row justify-center items-center ${otherStyles} ${
         isLoading ? "opacity-50" : ""
         }`}
         disabled={isLoading}

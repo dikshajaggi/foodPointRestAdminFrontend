@@ -16,10 +16,31 @@ const signup = () => {
             </ImageBackground>
           </View>
           <View className="h-1/2 px-4">
-            <FormInput placeholder="enter username" fieldName = "login" label = "enter username" handleChange= {(e) => setForm({...prev, username: e})} value={form.username} />
-            <FormInput placeholder="enter email" fieldName = "login" label = "enter email" handleChange= {(e) => setForm({...prev, email: e})} value={form.email} />
-            <FormInput placeholder="enter password" fieldName = "password" label = "enter password" handleChange= {(e) => setForm({...prev, password: e})} value={form.password} />
-            <CustomButton text="SignUp" isLoading = {false} />
+            <FormInput 
+              placeholder="enter username" 
+              fieldName = "login" 
+              label = "enter username" 
+              handleChange= {(e) => setForm({...form, username: e})} 
+              value={form.username} 
+              otherStyles = "mt-7"
+            />
+            <FormInput 
+              placeholder="enter email" 
+              fieldName = "login" 
+              label = "enter email" 
+              handleChange= {(e) => setForm({...form, email: e})} 
+              value={form.email} 
+              otherStyles = "mt-7"
+            />
+            <FormInput 
+              placeholder="enter password" 
+              fieldName = "password" 
+              label = "enter password" 
+              handleChange= {(e) => setForm({...form, password: e})} 
+              value={form.password} 
+              otherStyles = "mt-7"
+            />
+            <CustomButton text="SignUp" isLoading = {false} otherStyles = "mt-7" />
           </View>
         </View>
     )

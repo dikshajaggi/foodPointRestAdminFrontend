@@ -20,9 +20,23 @@ const login = () => {
           </ImageBackground>
         </View>
         <View className="h-1/2 px-4">
-          <FormInput placeholder="enter email" fieldName = "login" label = "enter email" handleChange= {(e) => setForm({...prev, email: e})} value={form.email} />
-          <FormInput placeholder="enter password" fieldName = "password" label = "enter password" handleChange= {(e) => setForm({...prev, password: e})} value={form.password} />
-          <CustomButton text="Login" isLoading = {false} />
+          <FormInput 
+            placeholder="enter email" 
+            fieldName = "login" 
+            label = "enter email" 
+            handleChange= {(e) => setForm({...form, email: e})} 
+            value={form.email} 
+            otherStyles = "mt-7"
+          />
+          <FormInput 
+            placeholder="enter password" 
+            fieldName = "password" 
+            label = "enter password" 
+            handleChange= {(e) => setForm({...form, password: e})} 
+            value={form.password} 
+            otherStyles = "mt-7"
+          />
+          <CustomButton text="Login" isLoading = {false} otherStyles = "mt-7" />
         </View>
       </View>
   )
