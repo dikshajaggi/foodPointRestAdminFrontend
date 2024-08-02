@@ -7,11 +7,10 @@ import FormInput from '../../components/FormInput'
 
 const login = () => {
 
-  const [email, setEmail] = useState(null)
-  const [pass, setPass] = useState(null)
-
-  const handleEmail = () => {}
-  const handlePassword = () => {}
+ const [form, setForm] = useState({
+  email: "",
+  password: ""
+ })
   
   return (
       <View className="h-full w-full">
@@ -21,8 +20,8 @@ const login = () => {
           </ImageBackground>
         </View>
         <View className="h-1/2 px-4">
-          <FormInput placeholder="enter email" fieldName = "login" label = "enter email" handleChange= {handleEmail} value={email} />
-          <FormInput placeholder="enter password" fieldName = "password" label = "enter password" handleChange= {handlePassword} value={pass} />
+          <FormInput placeholder="enter email" fieldName = "login" label = "enter email" handleChange= {(e) => setForm({...prev, email: e})} value={form.email} />
+          <FormInput placeholder="enter password" fieldName = "password" label = "enter password" handleChange= {(e) => setForm({...prev, password: e})} value={form.password} />
           <CustomButton text="Login" isLoading = {false} />
         </View>
       </View>
